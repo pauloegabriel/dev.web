@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Configurações básicas da página -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Homem-Aranha</title>
-	
-  <!-- Ícone da aba do navegador -->
-  <link rel="shortcut icon" type="image/png" href="img/aa.png" />
 
-  <!-- Bootstrap CDN -->
+  <!-- Ícone da aba do navegador -->
+  <link rel="shortcut icon" type="image/png" href="img/aranha.png" />
+
+  <!-- CSS do Bootstrap para facilitar o layout responsivo -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Fonte estilo quadrinhos -->
+  <!-- Fonte estilizada com aparência de quadrinhos -->
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
 
+  <!-- Estilo básico da página -->
   <style>
     html, body {
       height: 100%;
       margin: 0;
     }
-
     body {
       background-color: #0A1F44;
       color: #FFFFFF;
@@ -27,107 +28,41 @@
       display: flex;
       flex-direction: column;
     }
-
-    .navbar {
-      background-color: #D00000;
-    }
-
-    .navbar-brand {
-      color: #FFFFFF !important;
-      font-family: 'Bangers', cursive;
-      font-size: 1.5rem;
-    }
-
-    .btn-outline-light {
-      border-color: #FFFFFF;
-      color: #FFFFFF;
-      border-radius: 50px;
-      padding: 10px 30px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .btn-outline-light:hover {
-      background-color: #FFFFFF;
-      color: #D00000;
-      transform: translateY(-3px);
-    }
-
-    .dropdown-menu {
-      background-color: #D00000;
-      border: none;
-    }
-
-    .dropdown-item {
-      color: #FFFFFF;
-    }
-
-    .dropdown-item:hover {
-      background-color: #FFFFFF;
-      color: #D00000;
-    }
-
-    .form-control {
-      border-radius: 50px;
-      border: 2px solid #FFFFFF;
-      padding: 10px 20px;
-      font-size: 1rem;
-    }
-
-    .form-control:focus {
-      box-shadow: none;
-      border-color: #FFFFFF;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .spiderman-section img {
-      width: 300px;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
-
-    footer {
-      background-color: #0A1F44;
-      color: white;
-      border-top: 4px solid #D00000;
+    .card {
+      height: 100%;
     }
   </style>
 </head>
 
 <body>
-  <!-- CABEÇALHO -->
+  <!-- Cabeçalho com barra de navegação -->
   <header>
-    <nav class="navbar navbar-expand-lg p-3">
+    <nav class="navbar navbar-expand-lg p-3" style="background-color: #D00000;">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/aa.png" alt="Logo" width="30" height="30" class="me-2" />
+        <!-- Logo e título do site -->
+        <a class="navbar-brand" href="index.html" style="color: #FFFFFF; font-family: 'Bangers', cursive; font-size: 1.5rem;">
+          <img src="img/aranha.png" alt="Logo" width="30" height="30" class="me-2" />
           Homem-Aranha
         </a>
 
+        <!-- Botão para menu responsivo no mobile -->
         <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Itens de navegação -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item me-2">
               <a class="btn btn-outline-light" href="#">EM BREVE FILMES</a>
             </li>
 
+            <!-- Menu dropdown com mais opções -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle btn btn-outline-light" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">Mais</a>
+              <a class="nav-link dropdown-toggle btn btn-outline-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mais
+              </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="pages/contatos.html">Contatos</a></li>
                 <li><hr class="dropdown-divider" /></li>
@@ -137,6 +72,7 @@
             </li>
           </ul>
 
+          <!-- Campo de busca -->
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
             <button class="btn btn-outline-light" type="submit">Buscar</button>
@@ -146,53 +82,97 @@
     </nav>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- Conteúdo principal da página -->
   <main>
-   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="img/carrosel1.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
+    <!-- Carrossel com imagens em tela cheia e legenda -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/carrosel1.png" class="d-block w-100 vh-100" alt="Imagem tela cheia">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Aventura sem limites!</h5>
+            <p>Descubra os melhores momentos do Homem-Aranha no universo dos filmes.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carrosel2.png" class="d-block w-100 vh-100" alt="Imagem tela cheia">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Heróis e Vilões</h5>
+            <p>Enfrentando os maiores desafios para proteger Nova York.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carrosel3.png" class="d-block w-100 vh-100" alt="Imagem tela cheia">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Multiverso Aranha</h5>
+            <p>Explore todas as versões do herói que conquistou gerações.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+
+    <!-- Seção de cards com produtos à venda -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 px-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card">
+          <img src="img/PRODUTOS/produto1.png" class="card-img-top" alt="HQ Homem-Aranha">
+          <div class="card-body">
+            <h5 class="card-title">HQ: Partindo Pro Ataque Vol. 117</h5>
+            <p class="card-text">De <span style="text-decoration: line-through;">R$ 69,90</span></p>
+            <h4 class="card-text">Por apenas <span style="font-weight: 600; color: rgb(2, 182, 2);">R$ 34,90</span></h4>
+            <p class="card-text">Uma edição imperdível para fãs do Aracnídeo! Ação e emoção garantidas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card">
+          <img src="img/PRODUTOS/produto2.png" class="card-img-top" alt="Garrafa Homem-Aranha">
+          <div class="card-body">
+            <h5 class="card-title">Garrafa Squeeze Aranha 500ml</h5>
+            <p class="card-text">De <span style="text-decoration: line-through;">R$ 39,99</span></p>
+            <h4 class="card-text">Por apenas <span style="font-weight: 600; color: rgb(2, 182, 2);">R$ 24,90</span></h4>
+            <p class="card-text">Prática, resistente e estilosa. Leve seu herói favorito com você!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card">
+          <img src="img/PRODUTOS/produto3.png" class="card-img-top" alt="Camiseta Homem-Aranha">
+          <div class="card-body">
+            <h5 class="card-title">Camiseta Oficial 100% Algodão</h5>
+            <p class="card-text">De <span style="text-decoration: line-through;">R$ 59,90</span></p>
+            <h4 class="card-text">Por apenas <span style="font-weight: 600; color: rgb(2, 182, 2);">R$ 29,90</span></h4>
+            <p class="card-text">Confortável e estilosa para mostrar que você é fã de verdade!</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="img/carrosel2.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/carrosel3.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!--cards-->
-</div>
-    
   </main>
 
-  <!-- RODAPÉ -->
-  <footer class="text-center p-3">
-    &copy; 2025 - Universo Homem-Aranha. Todos os direitos reservados.
+  <!-- Rodapé do site -->
+  <footer class="text-center p-3 mt-5" style="background-color: #0A1F44; color: white; border-top: 4px solid #D00000;">
+    &copy; Universo Homem-Aranha.
   </footer>
 
-  <!-- Bootstrap JS CDN -->
+  <!-- Scripts do Bootstrap (inclui Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
